@@ -1,16 +1,32 @@
 ## Ofek Rafeli interviw for Polarize
 
 ### Magic List
-the code can be found here:
+the code can be found in MagicList.py
 
 importing is done by: 
 
-[comment]: <> (# todo)
+_from MagicList import * _ 
 
-using is done by:
+or:
 
-[comment]: <> (# todo)
+_from MagicList import MagicList_
 
-tests for this can be found here:
+this supports most array actions in python, for lack of time i did not include:
 
-[comment]: <> (# todo)
+
+ - Python List copy()
+ - Python List reverse()
+ - Python List Count()
+ - Python List sort()
+
+(mainly due to time and I didn't feel like they were the main point of the assingmnet)
+
+
+### API
+
+
+
+### tests
+
+for lack of time, i added a unifeid testing file for both
+tests.py contains this

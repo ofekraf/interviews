@@ -56,10 +56,3 @@ class MagicList:
     def __len__(self):
         return len(self.vals)
 
-    # current list of unsupported actions
-# (mainly due to time and I didn't feel like they were the main point of the assingmnet)
-
-# Python List copy()
-# Python List reverse()
-# Python List Count()
-# Python List sort()
