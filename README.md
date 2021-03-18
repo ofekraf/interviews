@@ -5,11 +5,11 @@ the code can be found in MagicList.py
 
 importing is done by: 
 
-_ from MagicList import * _ 
+from MagicList import * 
 
 or:
 
-_from MagicList import MagicList_
+from MagicList import MagicList
 
 this supports most array actions in python, for lack of time i did not include:
 
@@ -29,7 +29,7 @@ the code can be found in API.py
 
 importing is done by: 
 
-_ from API import * _ 
+from API import * 
 
 the entry point for the file in line 39, "async def login(request):"
 
