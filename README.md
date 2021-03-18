@@ -1,13 +1,16 @@
-##Ofek Rafeli interviw for Polarize
+## Ofek Rafeli interviw for Polarize
 
-###Magic List
+### Magic List
 the code can be found here:
 
 importing is done by: 
-# todo
+
+[comment]: <> (# todo)
 
 using is done by:
-# todo
+
+[comment]: <> (# todo)
 
 tests for this can be found here:
-# todo
+
+[comment]: <> (# todo)
