@@ -1,10 +1,19 @@
 from MagicList import *
+import io
+import sys
 
 
 def naive_test():
-    try:
-        a = MagicList()
-        assert a.string
+    capturedOutput = io.StringIO()
+    sys.stdout = capturedOutput
+
+    a = MagicList()
+    a[0] = 5
+    print(a, end="")
+
+    sys.stdout = sys.__stdout__
+
+    assert capturedOutput.getvalue() == "[5]"
 
 
 def TestMagicList():
