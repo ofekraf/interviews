@@ -1,0 +1,12 @@
+[
+    {
+        “name”: “device”,
+        “strVal”: “iPhone”,
+        “metadata”: “not interesting”
+    },
+    {
+        “name”: “isAuthorized”,
+        “boolVal”: “false”,
+        “lastSeen”: “not interesting”
+    }
+]
