@@ -46,12 +46,7 @@ async def login(request):
         user = get_user().get(name=username)
         if user and user[username] == password:
             auth.login_user(request, user)
-            return get_res(request)  # todo - extract only input json
+            return get_res(request.data)
     return response.redirect('/login')  # assuming there is a login page, just don't lket the user log in
     # for lack of time,  i did not build this page myself
-
-
-@app.route('/profile')
-@auth.login_required(user_keyword='user')
-async def profile(request, user):
-    return response.json({'user': user, 'requests': request})
+    # but notice this only supports post routing for logged in users
