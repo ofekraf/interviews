@@ -1,4 +1,4 @@
-## Ofek Rafeli interviw for Polarize
+## Ofek Rafaeli interviw
 
 ### Magic List
 the code can be found in MagicList.py
