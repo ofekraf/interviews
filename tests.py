@@ -1,8 +1,10 @@
 from MagicList import *
+from API import *
 import io
 import sys
 import pytest
 from dataclasses import dataclass
+
 
 def naive_test():
     captured_output = io.StringIO()
@@ -97,7 +99,6 @@ def pop_test():
 
 
 def class_support_test():
-
     @dataclass
     class Person:
         age: int = 1
@@ -120,10 +121,26 @@ def test_magic_list():
     class_support_test()
 
 
-def test_api():
-    pass
+def test_get_res():
+    assert get_res([
+        {
+            "name": "device",
+            "strVal": "iPhone",
+            "metadata": "not interesting"
+        },
+        {
+            "name": "isAuthorized",
+            "boolVal": "false",
+            "lastSeen": "not interesting"
+        }
+    ]) == {
+               "device": "iPhone",
+               "isAuthorized": "false"
+           }
 
+def test_api():
+    test_get_res()
 
 if __name__ == '__main__':
-    # test_magic_list() # todo
+    test_magic_list()
     test_api()
