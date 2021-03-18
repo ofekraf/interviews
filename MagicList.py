@@ -27,10 +27,10 @@ class MagicList:
         return str(self.vals)
 
     def append(self, val):
-        self.vals.append(val)
-
-    # def count(self):
-    #     todo
+        if not self.vals:
+            self.vals = [val]
+        else:
+            self.vals.append(val)
 
     def extend(self, other):
         self.vals.extend(other)
@@ -43,6 +43,10 @@ class MagicList:
         if end:
             return self.vals.index(element, end=end)
         return self.vals.index(element)
+
+    def remove(self, element):
+        self.vals.remove(element)
+
 
     def pop(self):
         self.vals.pop()
@@ -58,10 +62,5 @@ class MagicList:
 
 # Python List copy()
 # Python List reverse()
+# Python List Count()
 # Python List sort()
-#
-# Python List insert()
-# insert an element to the list
-#
-# Python List remove()
-# Removes item from the list
