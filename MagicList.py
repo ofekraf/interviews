@@ -1,14 +1,14 @@
 class MagicList:
 
-    def __init__(self, cls_type=None, vals=None):
+    def __init__(self, cls_type=None, initial_values=None):
         # supporting initial assingment operation
         # vals must be iterable
         if not cls_type:
             self.vals = []  # assuming a list is created with length >= 1
         else:
             self.vals = [cls_type()]
-        if vals:
-            for val in vals:
+        if initial_values:
+            for val in initial_values:
                 self.append(val)
 
     def __getitem__(self, key):
