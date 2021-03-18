@@ -2,7 +2,7 @@ from MagicList import *
 import io
 import sys
 import pytest
-
+from dataclasses import dataclass
 
 def naive_test():
     captured_output = io.StringIO()
@@ -96,6 +96,17 @@ def pop_test():
     assert a[0] == 9
 
 
+def class_support_test():
+
+    @dataclass
+    class Person:
+        age: int = 1
+
+    a = MagicList(cls_type=Person)
+    a[0].age = 5
+    assert a[0] == Person(age=5)
+
+
 def test_magic_list():
     naive_test()
     bad_first_assignment()
@@ -106,7 +117,13 @@ def test_magic_list():
     index_test()
     pop_test()
     remove_test()
+    class_support_test()
+
+
+def test_api():
+    pass
 
 
 if __name__ == '__main__':
-    test_magic_list()
+    # test_magic_list() # todo
+    test_api()
