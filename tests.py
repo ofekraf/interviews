@@ -35,7 +35,7 @@ def bad_first_assignment():
 
 
 def remove_test():
-    a = MagicList(vals=[1, 2, 3])
+    a = MagicList(initial_values=[1, 2, 3])
     a.remove(2)
     assert len(a) == 2
     assert a[0] == 1
@@ -74,7 +74,7 @@ def extend_test():
 
 def index_test():
     # alphabets list
-    alphabets = MagicList(vals=['a', 'e', 'i', 'o', 'g', 'l', 'i', 'u'])
+    alphabets = MagicList(initial_values=['a', 'e', 'i', 'o', 'g', 'l', 'i', 'u'])
 
     # index of 'i' in alphabets
     assert alphabets.index('e') == 1
@@ -138,8 +138,10 @@ def test_get_res():
                "isAuthorized": "false"
            }
 
+
 def test_api():
     test_get_res()
+
 
 if __name__ == '__main__':
     test_magic_list()
