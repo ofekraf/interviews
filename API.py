@@ -2,9 +2,6 @@ from sanic_auth import Auth
 from sanic import Sanic, response
 import json
 
-# most of the login was created following:
-# https://sanic-auth.readthedocs.io/en/latest/
-
 app = Sanic(__name__)
 app.config.AUTH_LOGIN_ENDPOINT = 'login'
 
@@ -47,6 +44,6 @@ async def login(request):
         if user and user[username] == password:
             auth.login_user(request, user)
             return get_res(request.data)
-    return response.redirect('/login')  # assuming there is a login page, just don't lket the user log in
+    return response.redirect('/login')  # assuming there is a login page, just don't let the user log in
     # for lack of time,  i did not build this page myself
     # but notice this only supports post routing for logged in users

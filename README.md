@@ -35,7 +35,11 @@ the entry point for the file in line 39, "async def login(request):"
 
 the main function of the program is "get_res" which returns the required format for the input data 
 
+not having used Sanic before, i mostly followed these links:
+- https://sanic-auth.readthedocs.io/en/latest/
+- https://github.com/pyx/sanic-auth
 
+ 
 ### tests
 
 for lack of time, I added a unified testing file for both
