@@ -41,12 +41,11 @@ class MagicList:
         if start:
             return self.vals.index(element, start)
         if end:
-            return self.vals.index(element, end=end)
+            return self.vals[:end].index(element)
         return self.vals.index(element)
 
     def remove(self, element):
         self.vals.remove(element)
-
 
     def pop(self):
         self.vals.pop()
@@ -55,9 +54,9 @@ class MagicList:
         self.vals.insert(index, element)
 
     def __len__(self):
-        return len(self.vals)  # todo - test
+        return len(self.vals)
 
-# current list of unsupported actions
+    # current list of unsupported actions
 # (mainly due to time and I didn't feel like they were the main point of the assingmnet)
 
 # Python List copy()
