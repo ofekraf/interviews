@@ -40,7 +40,7 @@ async def login(request):
         password = request.form.get('password')
 
         # fetch user from local_file
-        user = get_user().get(name=username)
+        user = get_user().get(name=username) # assuming this is a local file
         if user and user[username] == password:
             auth.login_user(request, user)
             return get_res(request.data)
